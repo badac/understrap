@@ -41,7 +41,9 @@ gulp.task( 'sass', function() {
             }
         } ) )
         .pipe(sourcemaps.init({loadMaps: true}))
-        .pipe( sass( { errLogToConsole: true } ) )
+        .pipe( sass( {
+            errLogToConsole: true,
+            } ) )
         .pipe( autoprefixer( 'last 2 versions' ) )
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
         .pipe( gulp.dest( paths.css ) )
@@ -129,11 +131,11 @@ gulp.task( 'browser-sync', function() {
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() { 
+gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() {
 } );
 
-// Run: 
-// gulp scripts. 
+// Run:
+// gulp scripts.
 // Uglifies and concat all JS files into one
 gulp.task( 'scripts', function() {
     var scripts = [

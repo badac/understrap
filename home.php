@@ -32,7 +32,9 @@ get_header();
 $container   = get_theme_mod( 'understrap_container_type' );
 ?>
 
-
+<?php if ( is_front_page() && is_home() ) : ?>
+	<?php get_template_part( 'global-templates/hero' ); ?>
+<?php endif; ?>
 
 <div class="wrapper" id="index-wrapper">
 
@@ -42,6 +44,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
+
         <div class="row">
 
 
