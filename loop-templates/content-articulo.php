@@ -23,7 +23,9 @@
 		<?php endif; ?>
 
 	</header><!-- .entry-header -->
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	<a href="<?php the_permalink(); ?>">
+		<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	</a>
 
 	<div class="entry-content">
 
@@ -40,10 +42,6 @@
 
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
 
-		<?php understrap_entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
