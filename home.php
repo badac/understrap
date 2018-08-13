@@ -11,6 +11,10 @@
  * @package understrap
  */
 
+$slider_args = array(
+  'category_name' => 'slider'
+);
+
 $colecciones_args = array(
   'category_name'=> 'colecciones'
 );
@@ -23,6 +27,7 @@ $noticias_args = array(
   'category_name'=> 'noticias'
 );
 
+$slider = new WP_Query( $slider_args );
 $colecciones = new WP_Query( $colecciones_args );
 $articulos = new WP_Query( $articulos_args );
 $noticias = new WP_Query( $noticias_args );
@@ -33,8 +38,12 @@ $container   = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <?php if ( is_front_page() && is_home() ) : ?>
-	<?php get_template_part( 'global-templates/hero' ); ?>
+
+	<?php /* get_template_part( 'global-templates/hero' ); */ ?>
+
+<?php echo do_shortcode('[metaslider id="107"]'); ?>
 <?php endif; ?>
+
 
 <div class="wrapper" id="index-wrapper">
 

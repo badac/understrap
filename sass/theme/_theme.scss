@@ -4,12 +4,20 @@ a{
   font-weight: 800;
 }
 
+
+.navbar-light{
+  border-bottom: 2px solid $gray-900;
+}
+
 .col-header{
   margin: 3em 0 2em 0;
   border-bottom: 2px solid black;
 }
 
 
+#page-wrapper{
+  padding: 6em 0 4em 0;
+}
 
 .btn{
   color: $primary;
@@ -21,4 +29,57 @@ a{
     background-color: $gray-500;
     border: 2px solid $black;
   }
+}
+
+.navbar-brand{
+  max-width: 200px;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+// image wp-image-39  attachment-medium size-medium
+
+
+#wrapper-footer-full{
+  padding: 5em 2em 0 2em;
+  background-color: $white;
+  border-top: 2px solid $gray-900;
+  .widget-title{
+    font-size: 1.4em;
+    margin-bottom: 1em;
+  }
+
+  .footer-widget{
+    ul{
+      list-style-type: none;
+      -webkit-margin-before: 0;
+      -webkit-padding-start: 0;
+
+    }
+  }
+  .textwidget{
+    font-size: .8em;
+    margin-top: 30%;
+    //position: absolute;
+    //bottom: 0;
+  }
+}
+
+.entry-title{
+  margin-bottom: 1.6em;
+}
+
+.entry-content{
+  margin-top: 2em;
+}
+
+.page-title{
+  text-transform: capitalize;
+  border-bottom: 1px solid $gray-900;
+}
+
+.page-header{
+  margin-bottom: 4em;
 }

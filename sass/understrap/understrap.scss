@@ -44,8 +44,8 @@
 .entry-footer span { padding-right: 10px; }
 
 //Woocommerce product gallery slider width fix
-figure.woocommerce-product-gallery__wrapper { 
-  max-width: inherit !important; 
+figure.woocommerce-product-gallery__wrapper {
+  max-width: inherit !important;
 }
 
 // Limit featured image size to 100%
@@ -108,10 +108,10 @@ a.skip-link {
 
 .navbar-light .navbar-brand a {
      color: $navbar-light-active-color;
-
     @include hover-focus {
       color: $navbar-light-active-color;
     }
+
 }
 
 .navbar-dark .navbar-brand a {
