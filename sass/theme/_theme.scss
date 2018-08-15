@@ -10,8 +10,11 @@ a{
 }
 
 .col-header{
-  margin: 3em 0 2em 0;
+  margin: $spacer*2 0 $spacer*2 0;
   border-bottom: 2px solid black;
+}
+.col-spacer{
+  margin-top: $spacer * 4 ;
 }
 
 
@@ -61,18 +64,23 @@ a{
   }
   .textwidget{
     font-size: .8em;
-    margin-top: 30%;
+    //margin-top: 30%;
     //position: absolute;
     //bottom: 0;
   }
 }
 
+
 .entry-title{
-  margin-bottom: 1.6em;
+  margin: $spacer * 2 0 $spacer * 2 0;
 }
 
 .entry-content{
-  margin-top: 2em;
+  margin: $spacer * 3 0 $spacer * 2 0;
+}
+
+.entry-footer{
+
 }
 
 .page-title{
@@ -81,5 +89,17 @@ a{
 }
 
 .page-header{
-  margin-bottom: 4em;
+  margin-bottom: $spacer;
+}
+
+.post-navigation{
+  margin: $spacer * 4 0 $spacer * 4 0;
+}
+
+
+.category-colecciones{
+
+  .entry-title{
+    font-size: $h6-font-size;
+  }
 }

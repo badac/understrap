@@ -32,8 +32,11 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						the_archive_title( '<h1 class="page-title">', '</h1>' );
 						?>
 					</header><!-- .page-header -->
+					<div class="row">
+
 
 					<?php /* Start the Loop */ ?>
+
 					<?php while ( have_posts() ) : the_post(); ?>
 
 						<?php
@@ -47,7 +50,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						?>
 
 					<?php endwhile; ?>
-
+					</div>
 				<?php else : ?>
 
 					<?php get_template_part( 'loop-templates/content-coleccion-card', 'none' ); ?>

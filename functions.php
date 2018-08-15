@@ -91,3 +91,16 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 
 });
+
+//add_image_size( 'category-thumb', 300, 9999 ); //300 pixels wide (and unlimited height)
+
+
+if ( function_exists( 'add_theme_support' ) ) {
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions (cropped)
+
+    // additional image sizes
+    // delete the next line if you do not need additional image sizes
+    add_image_size( 'cat-thumb', 300, 300, true); //300 pixels wide (and unlimited height)
+
+}

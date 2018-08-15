@@ -57,7 +57,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
         <div class="row">
 
 
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-12 col-md-4 col-spacer">
           <div class="col-header">
             <h1>Colecciones</h1>
           </div>
@@ -88,7 +88,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
         </div>
         <?php wp_reset_postdata(); ?>
 
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-12 col-md-4 col-spacer">
           <div class="col-header">
             <h1>Artículos</h1>
           </div>
@@ -119,7 +119,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
         <?php wp_reset_postdata(); ?>
 
 
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-12 col-md-4 col-spacer">
           <div class="col-header">
             <h1 >Noticias</h1>
           </div>
