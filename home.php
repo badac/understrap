@@ -39,9 +39,46 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 <?php if ( is_front_page() && is_home() ) : ?>
 
-	<?php /* get_template_part( 'global-templates/hero' ); */ ?>
 
-<?php echo do_shortcode('[metaslider id="107"]'); ?>
+  <?php if ( $slider->have_posts() ) : ?>
+  <?php $current_post = 0; ?>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+
+    <?php while ( $slider->have_posts() ) : $slider->the_post(); ?>
+
+
+      <?php
+      if( $current_post == 0 ) :
+        get_template_part( 'loop-templates/content-slide-active', get_post_format() );
+      else:
+        get_template_part( 'loop-templates/content-slide', get_post_format() );
+      endif;
+      ?>
+
+      <?php $current_post++; ?>
+    <?php endwhile; ?>
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+  <?php endif ?>
+  <?php wp_reset_postdata(); ?>
+
+
 <?php endif; ?>
 
 
