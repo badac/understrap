@@ -23,6 +23,10 @@ $articulos_args = array(
   'category_name'=> 'articulos'
 );
 
+$novedades_args = array(
+  'category_name'=>'novedades';
+);
+
 $noticias_args = array(
   'category_name'=> 'noticias'
 );
@@ -31,6 +35,7 @@ $slider = new WP_Query( $slider_args );
 $colecciones = new WP_Query( $colecciones_args );
 $articulos = new WP_Query( $articulos_args );
 $noticias = new WP_Query( $noticias_args );
+$novedades = new WP_Query($novedades_args);
 
 get_header();
 
@@ -127,13 +132,13 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
         <div class="col-sm-12 col-md-4 col-spacer">
           <div class="col-header">
-            <h1>Artículos</h1>
+            <h1>Novedades</h1>
           </div>
-          <?php if ( $articulos->have_posts() ) : ?>
+          <?php if ( $novedades->have_posts() ) : ?>
 
   					<?php /* Start the Loop */ ?>
 
-  					<?php while ( $articulos->have_posts() ) : $articulos->the_post(); ?>
+  					<?php while ( $novedades->have_posts() ) : $novedades->the_post(); ?>
 
   						<?php
 
