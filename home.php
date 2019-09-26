@@ -24,7 +24,7 @@ $articulos_args = array(
 );
 
 $novedades_args = array(
-  'category_name'=>'novedades';
+  'category_name'=>'novedades'
 );
 
 $noticias_args = array(
