@@ -113,3 +113,20 @@ a{
   -o-background-size: cover;
   background-size: cover;
 }
+
+.carousel-overlay{
+   z-index: 100;
+   position: absolute;
+   top:0;
+   left:0;
+   width: 100%;
+   height: 100%;
+}
+
+.intro{
+  font-size: $spacer * 1.6;
+  //font-weight: bold;
+  color: $white;
+  background-color: transparentize($black, .7);
+  padding: 3em;
+}

@@ -47,14 +47,16 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
   <?php if ( $slider->have_posts() ) : ?>
   <?php $current_post = 0; ?>
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
+  <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="6000">
 
+    <div class="carousel-inner" role="listbox">
+    <div class="carousel-overlay">
+      <div class="row-col d-flex align-items-center justify-content-center h-100 ">
+        <div class="col-sm-12 col-md-8 intro text-center">
+          El Banco de Archivos Digitales de Artes en Colombia –BADAC– es un repositorio temático multimedia perteneciente a la Facultad de Artes y Humanidades de la Universidad de los Andes, que custodia y divulga archivos físicos y digitales sobre la creación e investigación de las artes en Colombia (plástica, audiovisual, música, literatura, historia del arte, crítica del arte, humanidades, patrimonio cultural, etc.)
+        </div>
+      </div>
+    </div>
     <?php while ( $slider->have_posts() ) : $slider->the_post(); ?>
 
 
@@ -70,14 +72,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
     <?php endwhile; ?>
     </div>
 
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
 </div>
 
   <?php endif ?>
@@ -147,14 +141,14 @@ $container   = get_theme_mod( 'understrap_container_type' );
   						 * If you want to override this in a child theme, then include a file
   						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
   						 */
-  						get_template_part( 'loop-templates/content-articulo', get_post_format() );
+  						get_template_part( 'loop-templates/content-novedad', get_post_format() );
   						?>
 
   					<?php endwhile; ?>
 
   				<?php else : ?>
 
-  					<?php get_template_part( 'loop-templates/content-articulo', 'none' ); ?>
+  					<?php get_template_part( 'loop-templates/content-novedad', 'none' ); ?>
 
   				<?php endif; ?>
         </div>
