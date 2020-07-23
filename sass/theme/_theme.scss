@@ -1,9 +1,16 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
+body{
+  font-family: Inter-Regular;
+}
+
 a{
   font-weight: 800;
 }
 
+h1,h2,h3,h4,h5,h6{
+  font-family: Inter-SemiBold;
+}
 
 .navbar-light{
   border-bottom: 2px solid $gray-900;

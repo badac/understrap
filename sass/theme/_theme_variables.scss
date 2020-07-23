@@ -14,8 +14,81 @@
   src: url("../fonts/orkney/Orkney Regular.otf");
 }
 
+//Open Sans
+
+@font-face {
+  font-family: OpenSans-Light;
+  src: url("../fonts/Open_Sans/OpenSans-Light.ttf");
+}
+
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url("../fonts/Open_Sans/OpenSans-Bold.ttf");
+}
+
+
+//Raleway (Facartes Uniandes)
+
+@font-face {
+  font-family: Raleway-Light;
+  src: url("../fonts/Raleway/static/Raleway-Light.ttf");
+}
+
+@font-face {
+  font-family: Raleway-Regular;
+  src: url("../fonts/Raleway/static/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: Raleway-Bold;
+  src: url("../fonts/Raleway/static/Raleway-Bold.ttf");
+}
+
+//Lato (Uniandes)
+
+@font-face {
+  font-family: Lato-Light;
+  src: url("../fonts/Lato/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: Lato-Regular;
+  src: url("../fonts/Lato/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: Lato-Bold;
+  src: url("../fonts/Lato/Lato-Bold.ttf");
+}
+
+//Inter
+
+@font-face {
+  font-family: Inter-Bold;
+  src: url("../fonts/Inter/static/Inter-Light-slnt=0.ttf");
+}
+@font-face {
+  font-family: Inter-Regular;
+  src: url("../fonts/Inter/static/Inter-Regular-slnt=0.ttf");
+}
+@font-face {
+  font-family: Inter-SemiBold;
+  src: url("../fonts/Inter/static/Inter-SemiBold-slnt=0.ttf");
+}
+@font-face {
+  font-family: Inter-Bold;
+  src: url("../fonts/Inter/static/Inter-Bold-slnt=0.ttf");
+}
+
+
+
 //$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-family-sans-serif:      orkney-reg, !default;
+$font-family-sans-serif:      Inter-Regular, !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
@@ -282,7 +355,7 @@ $transition-collapse:         height .35s ease !default;
 // stylelint-enable value-keyword-case
 
 //$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-family-sans-serif:      orkney-reg, !default;
+$font-family-sans-serif:      Inter-Regular, !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 
