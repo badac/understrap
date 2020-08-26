@@ -8,28 +8,35 @@
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
-
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 
-	</header><!-- .entry-header -->
+	<div class="row justify-content-center">
+		<header class="entry-header col-sm-12 col-md-8">
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<div class="entry-meta">
+				<div class="author">
+					Por <?php echo get_the_author(); ?>
+				</div>
+				<div class="date">
+					<?php echo the_date('M d, Y') ?>
+				</div>
+			</div>
 
-	<div class="entry-content">
+		</header><!-- .entry-header -->
+		<div class="entry-content col-sm-12 col-md-8">
 
-		<?php the_content(); ?>
+			<?php the_content(); ?>
 
-		<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-			'after'  => '</div>',
-		) );
-		?>
+			<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+				'after'  => '</div>',
+			) );
+			?>
 
-	</div><!-- .entry-content -->
+		</div><!-- .entry-content -->
 
-
+	</div>
 
 </article><!-- #post-## -->

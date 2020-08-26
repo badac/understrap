@@ -102,6 +102,25 @@ if ( function_exists( 'add_theme_support' ) ) {
 
     // additional image sizes
     // delete the next line if you do not need additional image sizes
-    add_image_size( 'cat-thumb', 300, 300, true); //300 pixels wide (and unlimited height)
+    add_image_size( 'widescreen-sm', 300, 168, array( 'center', 'center' )); //300 pixels wide (and unlimited height)
+    add_image_size( 'widescreen-md', 600, 338, array( 'center', 'center' )); //300 pixels wide (and unlimited height)
 
 }
+// Register new post types
+//register_post_type( 'collections',
+// CPT Options
+//     array(
+//         'labels' => array(
+//             'name' => __( 'Collections' ),
+//             'singular_name' => __( 'Collection' )
+//         ),
+//         'public' => true,
+//         'has_archive' => true,
+//         'rewrite' => array('slug' => 'collections'),
+//         'show_in_rest' => true,
+//
+//     )
+// );
+
+// Hooking up our function to theme setup
+//add_action( 'init', 'create_posttype' );

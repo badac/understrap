@@ -73,6 +73,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
+				<a href="https://uniandes.edu.co" target="_blank" class="secondary-logo">
+					<?php
+						$logo_id = get_theme_mod( 'understrap_secondary_logo' );
+						//echo '<img src="' + $logo_id;+ '" class="secondary-logo">';
+						//echo wp_get_attachment_url($logo_id);
+						echo '  <img src="' . $logo_id . '" >';
+					?>
+				</a>
+
+
 			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>

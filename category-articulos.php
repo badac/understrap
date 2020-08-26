@@ -16,7 +16,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="archive-wrapper">
 
-	<div class="container" id="content" tabindex="-1">
+	<div class="container-fluid" id="content" tabindex="-1">
 
 		<div class="row">
 
@@ -32,22 +32,23 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						the_archive_title( '<h1 class="page-title">', '</h1>' );
 						?>
 					</header><!-- .page-header -->
+					<div class="row">
+						<?php /* Start the Loop */ ?>
+						<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
+							<?php
 
-						<?php
+							/*
+							 * Include the Post-Format-specific template for the content.
+							 * If you want to override this in a child theme, then include a file
+							 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+							 */
 
-						/*
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'loop-templates/content', get_post_format() );
-						?>
+							get_template_part( 'loop-templates/content-articulo', get_post_format() );
+							?>
 
 					<?php endwhile; ?>
-
+				</div>
 				<?php else : ?>
 
 					<?php get_template_part( 'loop-templates/content', 'none' ); ?>

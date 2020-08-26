@@ -29,7 +29,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 					<header class="page-header">
 						<?php
-						the_archive_title( '<h1 class="page-title text-center">', '</h1>' );
+				echo '<h1 class="page-title text-center">'. post_type_archive_title( '', false ) . '</h1>';
 						?>
 					</header><!-- .page-header -->
 
