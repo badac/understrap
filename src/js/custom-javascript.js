@@ -1,25 +1,26 @@
 
-(function(global, factory){
-  var jQuery, $ = require('jquery');
+(function(){
 
-  $('#colecciones-carousel').on('slide.bs.carousel', function (e) {
 
-      var $e = $(e.relatedTarget);
-      var idx = $e.index();
-      var itemsPerSlide = 3;
-      var totalItems = $('.carousel-item').length;
-
-      if (idx >= totalItems-(itemsPerSlide-1)) {
-          var it = itemsPerSlide - (totalItems - idx);
-          for (var i=0; i<it; i++) {
-              // append slides to end
-              if (e.direction=="left") {
-                  $('.carousel-item').eq(i).appendTo('.carousel-inner');
-              }
-              else {
-                  $('.carousel-item').eq(0).appendTo('.carousel-inner');
-              }
-          }
+  var slider = tns({
+    container: '#colecciones-slider',
+    controlsContainer: "#slide-controls",
+    items: 3,
+    slideBy: 'page',
+    autoplay: true,
+    autoplayButtonOutput: false,
+    nav: false,
+    responsive: {
+      576: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      992: {
+        items: 3
       }
+    }
   });
-})
+  console.log('init');
+})();

@@ -101,16 +101,11 @@ $container   = get_theme_mod( 'understrap_container_type' );
           <div class="row-col">
           <?php if ( $colecciones->have_posts() ) : ?>
 
-            <div id="colecciones-carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
-              <div class="carousel-inner row w-100 mx-auto" role="listbox">
+            <div id="colecciones-slider" class="colecciones-slider">
                 <?php while ( $colecciones->have_posts() ) : $colecciones->the_post(); ?>
-                  <?php if($colecciones->current_post == 0): ?>
-                    <div class="carousel-item col-md-3 active">
-                  <?php else: ?>
-                    <div class="carousel-item col-md-3">
-                  <?php endif; ?>
-                    <?php
 
+                    <div class="col-md-3">
+                    <?php
                     /*
                      * Include the Post-Format-specific template for the content.
                      * If you want to override this in a child theme, then include a file
@@ -120,7 +115,15 @@ $container   = get_theme_mod( 'understrap_container_type' );
                     ?>
                   </div>
                   <?php endwhile; ?>
-                </div>
+                  </div>
+                  <ul class="controls" id="slide-controls">
+                    <li class="prev" aria-controls="colecciones-slider" tabindex="-1" data-controls="prev">
+                      <i class="fa fa-angle-left fa-4x"></i>
+                    </li>
+                    <li class="next" aria-controls="colecciones-slider"  tabindex="-1" data-controls="next">
+                      <i class="fa fa-angle-right fa-4x"></i>
+                    </li>
+                  </ul>
               </div>
             </div>
   					<?php /* Start the Loop */ ?>
