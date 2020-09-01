@@ -53,7 +53,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
     <div class="carousel-overlay">
       <div class="row-col d-flex align-items-center justify-content-center h-100 ">
         <div class="col-sm-12 col-md-8 intro text-center">
-          El Banco de Archivos Digitales de Artes en Colombia –BADAC– es un repositorio temático multimedia perteneciente a la Facultad de Artes y Humanidades de la Universidad de los Andes, que custodia y divulga archivos físicos y digitales sobre la creación e investigación de las artes en Colombia (plástica, audiovisual, música, literatura, historia del arte, crítica del arte, humanidades, patrimonio cultural, etc.)
+          <?php echo get_theme_mod( 'understrap_site_motto' ) ?>
         </div>
       </div>
     </div>

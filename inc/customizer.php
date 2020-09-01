@@ -123,6 +123,27 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 							 'settings'   => 'understrap_secondary_logo'
 						)
 				) );
+			$wp_customize->add_setting( 'understrap_site_motto', array(
+				//'default'           => 'right',
+				'type'              => 'theme_mod',
+				//'sanitize_callback' => 'sanitize_text_field',
+				'capability'        => 'edit_theme_options',
+			) );
+
+			$wp_customize->add_control(
+				new WP_Customize_Control(
+						$wp_customize,
+						'understrap_site_motto',
+						array(
+							'label'       => __( 'Site motto', 'understrap' ),
+							'description' => __( "a short sentence or phrase chosen as encapsulating the beliefs or ideals of an individual, family, or institution.",
+							'understrap' ),
+							'section'     => 'title_tagline',
+							'settings'    => 'understrap_site_motto',
+							'type'        => 'textarea',
+
+						)
+				) );
 	}
 } // endif function_exists( 'understrap_theme_customize_register' ).
 add_action( 'customize_register', 'understrap_theme_customize_register' );
