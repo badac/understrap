@@ -85,8 +85,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
 
@@ -134,6 +132,8 @@ $container   = get_theme_mod( 'understrap_container_type' );
   <?php wp_reset_postdata(); ?>
 
   <?php if ( $noticias->have_posts() ) : ?>
+<div class="row">
+
 
         <div class="col-sm-12 col-spacer">
           <div class="col-header">
@@ -159,8 +159,8 @@ $container   = get_theme_mod( 'understrap_container_type' );
             </div>
           </div>
         </div>
+        </div>
       <?php endif; ?>
-    </div>
       <?php wp_reset_postdata(); ?>
 
 			</main><!-- #main -->
