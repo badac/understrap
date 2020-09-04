@@ -102,56 +102,46 @@ $container   = get_theme_mod( 'understrap_container_type' );
           <?php if ( $colecciones->have_posts() ) : ?>
 
             <div id="colecciones-slider" class="colecciones-slider">
-                <?php while ( $colecciones->have_posts() ) : $colecciones->the_post(); ?>
+              <?php /* Start the Loop */ ?>
 
-                    <div class="col-md-3">
-                    <?php
-                    /*
-                     * Include the Post-Format-specific template for the content.
-                     * If you want to override this in a child theme, then include a file
-                     * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                     */
-                    get_template_part( 'loop-templates/content-coleccion-home', get_post_format() );
-                    ?>
-                  </div>
-                  <?php endwhile; ?>
-                  </div>
-                  <ul class="controls" id="slide-controls">
-                    <li class="prev" aria-controls="colecciones-slider" tabindex="-1" data-controls="prev">
-                      <i class="fa fa-angle-left fa-4x"></i>
-                    </li>
-                    <li class="next" aria-controls="colecciones-slider"  tabindex="-1" data-controls="next">
-                      <i class="fa fa-angle-right fa-4x"></i>
-                    </li>
-                  </ul>
+              <?php while ( $colecciones->have_posts() ) : $colecciones->the_post(); ?>
+
+                  <div class="col-md-3">
+                  <?php
+                  /*
+                   * Include the Post-Format-specific template for the content.
+                   * If you want to override this in a child theme, then include a file
+                   * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                   */
+                  get_template_part( 'loop-templates/content-coleccion-home', get_post_format() );
+                  ?>
+                </div>
+                <?php endwhile; ?>
               </div>
-            </div>
-  					<?php /* Start the Loop */ ?>
-
-  				<?php else : ?>
-
-  					<?php get_template_part( 'loop-templates/content-coleccion', 'none' ); ?>
-
-  				<?php endif; ?>
+              <ul class="controls" id="slide-controls">
+                <li class="prev" aria-controls="colecciones-slider" tabindex="-1" data-controls="prev">
+                  <i class="fa fa-angle-left fa-4x"></i>
+                </li>
+                <li class="next" aria-controls="colecciones-slider"  tabindex="-1" data-controls="next">
+                  <i class="fa fa-angle-right fa-4x"></i>
+                </li>
+              </ul>
+          </div>
         </div>
 
-        </div>
-        <?php wp_reset_postdata(); ?>
+			<?php endif; ?>
+    </div>
+  <?php wp_reset_postdata(); ?>
 
+  <?php if ( $noticias->have_posts() ) : ?>
 
         <div class="col-sm-12 col-spacer">
           <div class="col-header">
             <h1 class="display-3">Noticias</h1>
           </div>
           <div class="row">
-            <?php if ( $noticias->have_posts() ) : ?>
-
-    					<?php /* Start the Loop */ ?>
-              <?php if ($noticias->found_posts > 1): ?>
-                <div class="col-sm">
-              <?php else: ?>
                 <div class="col-sm-4">
-              <?php endif; ?>
+                  <?php /* Start the Loop */ ?>
 
     					<?php while ( $noticias->have_posts() ) : $noticias->the_post(); ?>
 
@@ -166,19 +156,12 @@ $container   = get_theme_mod( 'understrap_container_type' );
     						?>
 
     					<?php endwhile; ?>
-
-    				<?php else : ?>
-
-    					<?php get_template_part( 'loop-templates/content-noticia', 'none' ); ?>
-
             </div>
-
-    				<?php endif; ?>
           </div>
         </div>
-        <?php wp_reset_postdata(); ?>
-
+      <?php endif; ?>
     </div>
+      <?php wp_reset_postdata(); ?>
 
 			</main><!-- #main -->
 
