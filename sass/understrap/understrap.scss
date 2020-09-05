@@ -1,8 +1,18 @@
 // Some basic padding for all wrappers
 .wrapper {
   //padding: $grid-gutter-width * 2 0;
+
   //padding: $spacer * 4 0;
   padding: 93px;
+}
+
+@media screen and (max-width: map-get($grid-breakpoints,"md" )){
+  .wrapper {
+    //padding: $grid-gutter-width * 2 0;
+
+    padding: $spacer * 4 0;
+    //padding: 93px;
+  }
 }
 
 // Reset hero wrapper padding to 0
