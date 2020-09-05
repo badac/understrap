@@ -124,3 +124,15 @@ if ( function_exists( 'add_theme_support' ) ) {
 
 // Hooking up our function to theme setup
 //add_action( 'init', 'create_posttype' );
+
+if ( function_exists('register_sidebar') )
+  register_sidebar(array(
+    'id' => 'instagram-feed-area',
+    'name' => 'Instagram Feed',
+    'before_widget' => '<div class = "instagram-feed-area">',
+    'description' => 'Instagram or other social media widget.',
+    'after_widget' => '</div>',
+    'before_title' => '<div class="col-header"><h2 class="display-3">',
+    'after_title' => '</h2></div>',
+  )
+);

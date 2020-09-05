@@ -93,7 +93,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
         <div class="col-sm-12 col-spacer">
           <div class="col-header">
-            <h1 class="display-3">Colecciones</h1>
+            <h2 class="display-3">Colecciones</h2>
           </div>
 
           <div class="row-col">
@@ -137,7 +137,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
         <div class="col-sm-12 col-spacer">
           <div class="col-header">
-            <h1 class="display-3">Noticias</h1>
+            <h2 class="display-3">Noticias</h2>
           </div>
           <div class="row">
                 <div class="col-sm-4">
@@ -163,14 +163,20 @@ $container   = get_theme_mod( 'understrap_container_type' );
       <?php endif; ?>
       <?php wp_reset_postdata(); ?>
 
-			</main><!-- #main -->
+      <!-- Instagram widget area -->
 
+      <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("instagram-feed-area") ) : ?>
+
+        <div class="row">
+            <?php dynamic_sidebar( 'instagram-feed-area' ); ?>
+        </div>
+      <?php endif;?>
+      <!-- END Instagram widget area -->
+
+			</main><!-- #main -->
 
 			<!-- The pagination component -->
 			<?php understrap_pagination(); ?>
-
-		<!-- Do the right sidebar check -->
-		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
 
 
