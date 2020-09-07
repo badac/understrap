@@ -17,6 +17,16 @@ h1,h2,h3,h4,h5,h6{
   //text-transform: uppercase;
 }
 
+//modificación de las clases display de BootStrap
+//eliminar cuando se actualize la versión de bootstrap a 4.5
+//y al habilitar la opción $responsive-font-sizes
+
+@media screen and (max-width: map-get($grid-breakpoints, 'md')){
+  .display-3{
+   font-size: 3rem;
+  }
+}
+
 .navbar-light{
   border-bottom: 2px solid $gray-900;
 }

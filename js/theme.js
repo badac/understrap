@@ -3993,6 +3993,9 @@ var tns=function(){var t=window,Ai=t.requestAnimationFrame||t.webkitRequestAnima
     autoplayButtonOutput: false,
     nav: false,
     responsive: {
+      50: {
+        items: 1
+      },
       576: {
         items: 1
       },
