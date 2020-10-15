@@ -23,7 +23,7 @@
 		<?php endif; ?>
 
 	</header><!-- .entry-header -->
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	<?php the_post_thumbnail(); ?>
 
 	<div class="entry-content">
 

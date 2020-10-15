@@ -12,7 +12,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 <div class="hero-wrapper">
 	<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+		<?php echo get_the_post_thumbnail( $post->ID, 'widescreen-lg' ); ?>
 
 
 	<?php endwhile; // end of the loop. ?>

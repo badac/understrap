@@ -4,8 +4,11 @@
  *
  * @package understrap
  */
-
+ $get_author_id = get_the_author_meta('ID');
+ $author_gravatar_url = get_avatar_url($get_author_id, array('size' => 50));
 ?>
+
+
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 
@@ -15,9 +18,10 @@
 
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			<div class="entry-meta">
-				<div class="author">
+				<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" class="author">
+					<img src="<?php echo $author_gravatar_url ?>" class="profile-gravatar" alt="">
 					Por <?php echo get_the_author(); ?>
-				</div>
+				</a>
 				<div class="date">
 					<?php echo the_date('M d, Y') ?>
 				</div>

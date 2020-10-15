@@ -5,6 +5,9 @@
  * @package understrap
  */
 
+ $get_author_id = get_the_author_meta('ID');
+ $author_gravatar_url = get_avatar_url($get_author_id, array('size' => 450));
+
 ?>
 
 <article <?php post_class('col'); ?> id="post-<?php the_ID(); ?>">

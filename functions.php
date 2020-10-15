@@ -102,8 +102,9 @@ if ( function_exists( 'add_theme_support' ) ) {
 
     // additional image sizes
     // delete the next line if you do not need additional image sizes
-    add_image_size( 'widescreen-sm', 300, 168, array( 'center', 'center' )); //300 pixels wide (and unlimited height)
-    add_image_size( 'widescreen-md', 600, 338, array( 'center', 'center' )); //300 pixels wide (and unlimited height)
+    add_image_size( 'widescreen-sm', 400, 9999, array( 'center', 'center' )); //300 pixels wide (and unlimited height)
+    add_image_size( 'widescreen-md', 900, 9999, array( 'center', 'center' )); //300 pixels wide (and unlimited height)
+    add_image_size( 'widescreen-lg', 1920, 9999, array( 'center', 'center' )); //300 pixels wide (and unlimited height)
 
 }
 // Register new post types
@@ -136,3 +137,44 @@ if ( function_exists('register_sidebar') )
     'after_title' => '</h2></div>',
   )
 );
+
+
+
+function elbadac_content_image_sizes_attr( $sizes, $size ) {
+	$width = $size[0];
+
+	// if ( 740 <= $width ) {
+	// 	$sizes = '(max-width: 706px) 89vw, (max-width: 767px) 82vw, 740px';
+	// }
+
+	if ( is_archive() || is_search() || is_home() || is_page() ) {
+
+		$sizes = '(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1920px) 1920px, 900px';
+
+	}
+
+	return $sizes;
+}
+add_filter( 'wp_calculate_image_sizes', 'elbadac_content_image_sizes_attr', 10, 2 );
+
+/**
+ * Add custom image sizes attribute to enhance responsive image functionality
+ * for post thumbnails.
+ *
+ * @since Twenty Seventeen 1.0
+ *
+ * @param array $attr       Attributes for the image markup.
+ * @param int   $attachment Image attachment ID.
+ * @param array $size       Registered image size or flat array of height and width dimensions.
+ * @return array The filtered attributes for the image markup.
+ */
+function elbadac_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
+	if ( is_archive() || is_search() || is_home() ) {
+		$attr['sizes'] = '(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1920px) 1200px, 580px';
+	} else {
+		$attr['sizes'] = '100vw';
+	}
+
+	return $attr;
+}
+add_filter( 'wp_get_attachment_image_attributes', 'elbadac_post_thumbnail_sizes_attr', 10, 3 );
