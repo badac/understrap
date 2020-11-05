@@ -104,7 +104,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
               <?php while ( $colecciones->have_posts() ) : $colecciones->the_post(); ?>
 
-                  <div class="col-md-3">
+                  <div class="col-sm-12 col-md-4">
                   <?php
                   /*
                    * Include the Post-Format-specific template for the content.
@@ -140,7 +140,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
             <h2 class="display-3">Noticias</h2>
           </div>
           <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-12 col-md-4">
                   <?php /* Start the Loop */ ?>
 
     					<?php while ( $noticias->have_posts() ) : $noticias->the_post(); ?>
