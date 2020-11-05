@@ -135,12 +135,11 @@ $container   = get_theme_mod( 'understrap_container_type' );
 <div class="row">
 
 
-        <div class="col-sm-12 col-spacer">
+        <div class="col-sm-12">
           <div class="col-header">
             <h2 class="display-3">Noticias</h2>
           </div>
           <div class="row">
-                <div class="col-sm-12 col-md-4">
                   <?php /* Start the Loop */ ?>
 
     					<?php while ( $noticias->have_posts() ) : $noticias->the_post(); ?>
@@ -156,7 +155,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
     						?>
 
     					<?php endwhile; ?>
-            </div>
           </div>
         </div>
         </div>
