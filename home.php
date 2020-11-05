@@ -139,22 +139,33 @@ $container   = get_theme_mod( 'understrap_container_type' );
           <div class="col-header">
             <h2 class="display-3">Noticias</h2>
           </div>
-          <div class="row">
-                  <?php /* Start the Loop */ ?>
+          <div class="row-col">
+            <div id="noticias-slider" class="noticias-slider">
+              <?php /* Start the Loop */ ?>
 
-    					<?php while ( $noticias->have_posts() ) : $noticias->the_post(); ?>
+          <?php while ( $noticias->have_posts() ) : $noticias->the_post(); ?>
+            <div class="col-sm-12 col-md-4">
 
-    						<?php
+            <?php
 
-    						/*
-    						 * Include the Post-Format-specific template for the content.
-    						 * If you want to override this in a child theme, then include a file
-    						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-    						 */
-    						get_template_part( 'loop-templates/content-noticia', get_post_format() );
-    						?>
-
-    					<?php endwhile; ?>
+            /*
+             * Include the Post-Format-specific template for the content.
+             * If you want to override this in a child theme, then include a file
+             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+             */
+            get_template_part( 'loop-templates/content-noticia', get_post_format() );
+            ?>
+            </div>
+          <?php endwhile; ?>
+            </div>
+            <ul class="controls" id="slide-noticia-controls">
+              <li class="prev" aria-controls="noticias-slider" tabindex="-1" data-controls="prev">
+                <i class="fa fa-angle-left fa-4x"></i>
+              </li>
+              <li class="next" aria-controls="noticias-slider"  tabindex="-1" data-controls="next">
+                <i class="fa fa-angle-right fa-4x"></i>
+              </li>
+            </ul>
           </div>
         </div>
         </div>

@@ -4007,5 +4007,31 @@ var tns=function(){var t=window,Ai=t.requestAnimationFrame||t.webkitRequestAnima
       }
     }
   });
+
+  var slider2 = tns({
+    container: '#noticias-slider',
+    controlsContainer: "#slide-noticia-controls",
+    items: 3,
+    slideBy: 'page',
+    autoplay: true,
+    autoplayButtonOutput: false,
+    nav: false,
+    responsive: {
+      50: {
+        items: 1
+      },
+      576: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      992: {
+        items: 3
+      }
+    }
+  });
+
+
   console.log('init');
 })();
