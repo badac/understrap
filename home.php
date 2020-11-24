@@ -152,10 +152,10 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
         <div class="col-sm-12">
           <div class="col-header">
-            <h2 class="display-3">Noticias</h2>
+            <h2 class="display-3">Blog</h2>
           </div>
           <div class="row-col">
-            <div id="noticias-slider" class="noticias-slider">
+            <div id="blog-slider" class="blog-slider">
               <?php /* Start the Loop */ ?>
 
           <?php while ( $blog->have_posts() ) : $blog->the_post(); ?>
@@ -168,16 +168,16 @@ $container   = get_theme_mod( 'understrap_container_type' );
              * If you want to override this in a child theme, then include a file
              * called content-___.php (where ___ is the Post Format name) and that will be used instead.
              */
-            get_template_part( 'loop-templates/content-articulo', get_post_format() );
+            get_template_part( 'loop-templates/content-noticia', get_post_format() );
             ?>
             </div>
           <?php endwhile; ?>
             </div>
-            <ul class="controls" id="slide-noticia-controls">
-              <li class="prev" aria-controls="noticias-slider" tabindex="-1" data-controls="prev">
+            <ul class="controls" id="slide-blog-controls">
+              <li class="prev" aria-controls="blog-slider" tabindex="-1" data-controls="prev">
                 <i class="fa fa-angle-left fa-4x"></i>
               </li>
-              <li class="next" aria-controls="noticias-slider"  tabindex="-1" data-controls="next">
+              <li class="next" aria-controls="blog-slider"  tabindex="-1" data-controls="next">
                 <i class="fa fa-angle-right fa-4x"></i>
               </li>
             </ul>

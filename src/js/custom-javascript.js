@@ -49,6 +49,29 @@
       }
     }
   });
+  var slider3 = tns({
+    container: '#blog-slider',
+    controlsContainer: "#slide-blog-controls",
+    items: 3,
+    slideBy: 'page',
+    autoplay: true,
+    autoplayButtonOutput: false,
+    nav: false,
+    responsive: {
+      50: {
+        items: 1
+      },
+      576: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      992: {
+        items: 3
+      }
+    }
+  });
 
 
   console.log('init');
