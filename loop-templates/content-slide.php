@@ -12,7 +12,7 @@
 
 
 <a href="<?php the_permalink(); ?>">
-  <?php echo get_the_post_thumbnail( $post->ID, 'widescreen-md' ); ?>
+  <?php echo get_the_post_thumbnail( $post->ID, 'widescreen-thumb' ); ?>
 </a>
 <header class="entry-header">
 

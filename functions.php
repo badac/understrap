@@ -105,7 +105,7 @@ if ( function_exists( 'add_theme_support' ) ) {
     add_image_size( 'widescreen-sm', 400, 9999, array( 'center', 'center' )); //300 pixels wide (and unlimited height)
     add_image_size( 'widescreen-md', 900, 9999, array( 'center', 'center' )); //300 pixels wide (and unlimited height)
     add_image_size( 'widescreen-lg', 1920, 9999, array( 'center', 'center' )); //300 pixels wide (and unlimited height)
-    add_image_size( 'widescreen-thumb', 512, 288, array( 'center', 'center' )); //300 pixels wide (and unlimited height)
+    add_image_size( 'widescreen-thumb', 512, 288, array( 'center', 'center' )); 
 }
 // Register new post types
 //register_post_type( 'collections',
