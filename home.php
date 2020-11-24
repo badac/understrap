@@ -129,11 +129,21 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 			<?php endif; ?>
     </div>
+
+    <!-- Instagram widget area -->
+
+    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("instagram-feed-area") ) : ?>
+
+      <div class="row">
+          <?php dynamic_sidebar( 'instagram-feed-area' ); ?>
+      </div>
+    <?php endif;?>
+    <!-- END Instagram widget area -->
+
   <?php wp_reset_postdata(); ?>
 
   <?php if ( $noticias->have_posts() ) : ?>
-<div class="row">
-
+  <div class="row">
 
         <div class="col-sm-12">
           <div class="col-header">
@@ -172,15 +182,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
       <?php endif; ?>
       <?php wp_reset_postdata(); ?>
 
-      <!-- Instagram widget area -->
 
-      <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("instagram-feed-area") ) : ?>
-
-        <div class="row">
-            <?php dynamic_sidebar( 'instagram-feed-area' ); ?>
-        </div>
-      <?php endif;?>
-      <!-- END Instagram widget area -->
 
 			</main><!-- #main -->
 
