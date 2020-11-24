@@ -31,10 +31,15 @@ $noticias_args = array(
   'category_name'=> 'noticias'
 );
 
+$blog_args = array(
+  'category_name'=> 'blog'
+);
+
 $slider = new WP_Query( $slider_args );
 $colecciones = new WP_Query( $colecciones_args );
 $articulos = new WP_Query( $articulos_args );
 $noticias = new WP_Query( $noticias_args );
+$blog = new WP_Query( $noticias_args );
 //$novedades = new WP_Query($novedades_args);
 
 get_header();
@@ -141,6 +146,46 @@ $container   = get_theme_mod( 'understrap_container_type' );
     <!-- END Instagram widget area -->
 
   <?php wp_reset_postdata(); ?>
+
+  <?php if ( $blog->have_posts() ) : ?>
+  <div class="row">
+
+        <div class="col-sm-12">
+          <div class="col-header">
+            <h2 class="display-3">Noticias</h2>
+          </div>
+          <div class="row-col">
+            <div id="noticias-slider" class="noticias-slider">
+              <?php /* Start the Loop */ ?>
+
+          <?php while ( $blog->have_posts() ) : $blog->the_post(); ?>
+            <div class="col-sm-12 col-md-4">
+
+            <?php
+
+            /*
+             * Include the Post-Format-specific template for the content.
+             * If you want to override this in a child theme, then include a file
+             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+             */
+            get_template_part( 'loop-templates/content-articulo', get_post_format() );
+            ?>
+            </div>
+          <?php endwhile; ?>
+            </div>
+            <ul class="controls" id="slide-noticia-controls">
+              <li class="prev" aria-controls="noticias-slider" tabindex="-1" data-controls="prev">
+                <i class="fa fa-angle-left fa-4x"></i>
+              </li>
+              <li class="next" aria-controls="noticias-slider"  tabindex="-1" data-controls="next">
+                <i class="fa fa-angle-right fa-4x"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      <?php endif; ?>
+      <?php wp_reset_postdata(); ?>
 
   <?php if ( $noticias->have_posts() ) : ?>
   <div class="row">
