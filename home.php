@@ -39,7 +39,7 @@ $slider = new WP_Query( $slider_args );
 $colecciones = new WP_Query( $colecciones_args );
 $articulos = new WP_Query( $articulos_args );
 $noticias = new WP_Query( $noticias_args );
-$blog = new WP_Query( $noticias_args );
+$blog = new WP_Query( $blog_args );
 //$novedades = new WP_Query($novedades_args);
 
 get_header();
