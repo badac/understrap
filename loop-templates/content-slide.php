@@ -1,13 +1,40 @@
 <?php
 /**
- * Single post partial template.
- *
- * @package understrap
- */
-
-$img_url  = get_the_post_thumbnail_url( $post , 'large' );
+* Post rendering content according to caller of get_template_part.
+*
+* @package understrap
+*/
 
 ?>
-<div class="carousel-item" style="background-image: url(' <?php echo $img_url ?> ')">
 
-</div>
+<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+
+
+
+<a href="<?php the_permalink(); ?>">
+  <?php echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); ?>
+</a>
+<header class="entry-header">
+
+  <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+  '</a></h2>' ); ?>
+
+  <?php if ( 'post' == get_post_type() ) : ?>
+
+  <?php endif; ?>
+
+</header><!-- .entry-header -->
+<div class="entry-content">
+
+  <?php
+  wp_link_pages( array(
+    'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+    'after'  => '</div>',
+  ) );
+  ?>
+
+</div><!-- .entry-content -->
+
+
+
+</article><!-- #post-## -->
