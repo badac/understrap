@@ -128,11 +128,13 @@ h1,h2,h3,h4,h5,h6{
 
 }
 
-.wp-post-image-wrapper{
-  max-height: 80vh;
+
+img.wp-post-image{
+  max-width: 100%;
+  width: 100%;
+  height: 80vh;
+  object-fit: contain;
 }
-
-
 
 /// AUTHOR IN POST
 

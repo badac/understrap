@@ -8,19 +8,21 @@
 get_header();
 $container   = get_theme_mod( 'understrap_container_type' );
 ?>
-<div class="row justify-content-center">
-	<div class="col-10">
-		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php echo get_the_post_thumbnail( $post->ID, 'widescreen-lg' ); ?>
-
-
-		<?php endwhile; // end of the loop. ?>
-	</div>
-</div>
 
 
 <div class="wrapper" id="single-wrapper">
+
+	<div class="row justify-content-center" id="featured-image-block">
+		<div class="col-10">
+			<?php while ( have_posts() ) : the_post(); ?>
+
+				<?php echo get_the_post_thumbnail( $post->ID, 'widescreen-lg' ); ?>
+
+
+			<?php endwhile; // end of the loop. ?>
+		</div>
+	</div>
 
 	<div class="container-fluid" id="content" tabindex="-1">
 
