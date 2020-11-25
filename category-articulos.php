@@ -32,7 +32,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						the_archive_title( '<h1 class="page-title">', '</h1>' );
 						?>
 					</header><!-- .page-header -->
-					<div class="row">
+					<div class="card-columns">
 						<?php /* Start the Loop */ ?>
 						<?php while ( have_posts() ) : the_post(); ?>
 

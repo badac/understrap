@@ -14,7 +14,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper" id="single-wrapper">
 
 	<div class="row justify-content-center" id="featured-image-block">
-		<div class="col-10">
+		<div class="col-10 featured-image-block">
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php echo get_the_post_thumbnail( $post->ID, 'widescreen-lg' ); ?>
