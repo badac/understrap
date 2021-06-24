@@ -3983,7 +3983,7 @@ var tns=function(){var t=window,Ai=t.requestAnimationFrame||t.webkitRequestAnima
 
 (function(){
 
-
+/*
   var slider = tns({
     container: '#colecciones-slider',
     controlsContainer: "#slide-controls",
@@ -4007,7 +4007,7 @@ var tns=function(){var t=window,Ai=t.requestAnimationFrame||t.webkitRequestAnima
       }
     }
   });
-
+*/
   var slider2 = tns({
     container: '#noticias-slider',
     controlsContainer: "#slide-noticia-controls",

@@ -1,7 +1,7 @@
 
 (function(){
 
-
+/*
   var slider = tns({
     container: '#colecciones-slider',
     controlsContainer: "#slide-controls",
@@ -25,7 +25,7 @@
       }
     }
   });
-
+*/
   var slider2 = tns({
     container: '#noticias-slider',
     controlsContainer: "#slide-noticia-controls",
