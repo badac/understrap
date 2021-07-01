@@ -227,6 +227,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
       <?php wp_reset_postdata(); ?>
 
       <div class="row">
+        <div class="col-header">
+          <h2 class="display-3">Equipo</h2>
+        </div>
         <div class="col-sm-12">
           <div class="card-deck">
             <?php foreach ($profiles as $profile ) :  ?>
