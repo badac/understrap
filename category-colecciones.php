@@ -8,6 +8,16 @@
  */
 
 get_header();
+
+$args = array(
+  'category_name' => 'presentacion-coleccion'
+);
+
+$presentacion_query = new WPQuery($args);
+$presentacion_coleccion = false;
+if ($presentacion_query->have_posts()){
+	$presentacion_coleccion = $presentacion_query->posts[0];
+}
 ?>
 
 <?php
@@ -18,6 +28,14 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
+		<?php if($presentacion_coleccion); ?>
+			<div class="row">
+				<div class="col">
+					<?php echo $presentacion_coleccion-> ?>
+				</div>
+
+			</div>
+		<?php endif; ?>
 		<div class="row">
 
 			<!-- Do the left sidebar check -->

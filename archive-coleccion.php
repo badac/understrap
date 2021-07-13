@@ -33,7 +33,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						?>
 					</header><!-- .page-header -->
 
-
+					<div class="row-col">
+							<?php the_content(); ?>
+					</div>
 					<?php /* Start the Loop */ ?>
 					<?php $post_count = 0; ?>
 					<?php while ( have_posts() ) : the_post(); ?>
