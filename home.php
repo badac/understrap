@@ -45,16 +45,6 @@ $noticias = new WP_Query( $noticias_args );
 $blog = new WP_Query( $blog_args );
 //$novedades = new WP_Query($novedades_args);
 
-$camilo = get_user_by('email', 'gemartin@uniandes.edu.co');
-$mariajuliana = get_user_by('email', 'mj.vargas1459@uniandes.edu.co');
-$sergio = get_user_by('email', 'so.mendez@uniandes.edu.co');
-
-$profiles = array(
-  'mariajuliana' => $mariajuliana,
-  'sergio' => $sergio,
-  'camilo' => $camilo
-);
-
 get_header();
 
 $container   = get_theme_mod( 'understrap_container_type' );
@@ -225,28 +215,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
         </div>
       <?php endif; ?>
       <?php wp_reset_postdata(); ?>
-
-      <div class="row">
-        <div class="col-header">
-          <h2 class="display-3">Equipo</h2>
-        </div>
-        <div class="col-sm-12">
-          <div class="card-deck">
-            <?php foreach ($profiles as $profile ) :  ?>
-              <div class="card">
-                <img src=<?php echo get_avatar_url($profile->ID) ?> alt="">
-                <div class="card-body">
-                  <h3 class="car-title"><?php echo $profile->display_name; ?></h3>
-                  <p>
-                    <?php echo $profile->description; ?>
-                  </p>
-                  <a href="mailto:<?php echo $profile->email ?>"><?php echo $profile->user_email ?></a>
-                </div>
-              </div>
-            <?php endforeach; ?>
-          </div>
-        </div>
-      </div>
 
 			</main><!-- #main -->
 
