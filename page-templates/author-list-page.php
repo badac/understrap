@@ -3,6 +3,8 @@
  * Template Name: Author list template
  *
  * Template to display page with margins both sides.
+ * Incluye listado de autores del BADAC.
+ * La petición se hace con los correos de los integrantes del badac.
  *
  * @package understrap
  */

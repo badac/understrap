@@ -2,7 +2,8 @@
 /**
  * Template Name: Coleccion list template
  *
- * Template to display page with margins both sides.
+ * Plantilla que incluye listado de fondos y coleccoiones
+ * Margen a ambos lados.
  *
  * @package understrap
  */
